@@ -20,6 +20,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    recipes: [
+      {
+        recipeName: String,
+        ingredients: [String],
+      },
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
+const User = require("../models/User.model");
+
 
 //to safeguard api info, app-id and app-key, on the env file
 const myAppId = process.env.APP_ID;
@@ -15,7 +17,7 @@ router.get("/my-recipes", async (req, res, next) => {
     );
 
     let data = response.data.hits;
-    console.log(response.data.hits);
+    /* console.log(response.data.hits); */
 
     res.render("recipes/my-recipes.hbs", { data: data });
   } catch (err) {
@@ -23,6 +25,32 @@ router.get("/my-recipes", async (req, res, next) => {
     next(err);
   }
 });
+
+router.post('/profile-my-recipes', async (req, res) => {
+  const recipeName = req.body.recipeName;
+  const ingredients = req.body.ingredients;
+
+  try {
+    const user = await User.findOneAndUpdate(
+      { email: req.user.email },
+      {
+        $push: {
+          recipes: {
+            recipeName: recipeName,
+            ingredients: ingredients,
+          },
+        },
+      },
+      { new: true }
+    );
+    console.log('user:', user);
+    res.redirect('/profile/my-recipes');
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
 
 /* Sends us from profile page to my-mealplan page */
 router.get("/my-mealplan", (req, res, next) => {

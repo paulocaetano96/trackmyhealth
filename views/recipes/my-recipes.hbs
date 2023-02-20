@@ -12,22 +12,23 @@
 <br />
 {{! --------------------------------------------------------------- }}
 
-
-{{#each data}}
-<div class="card" style="width: 18rem;">
-  
-  <div class="card-body">
-    <h5 class={{recipe.label}}>{{recipe.label}}</h5>
-   
-    {{#each recipe.ingredients}}
-    <p class="card-text">{{text }}</p>
-
-  {{/each}}
-   <a href="#" class="btn btn-primary">See or Edit Details</a>
+<div class="recipe-cards">
+  {{#each data}}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 id="recipe-name" class="{{recipe.label}}">{{recipe.label}}</h5>
+      {{#each recipe.ingredients}}
+        <p class="card-text">{{text}}</p>
+      {{/each}}
+      <form method="POST" action="/profile/my-recipes">
+        <button type="submit" class="btn btn-primary">Add to mealplan</button>
+        <input type="hidden" name="recipeName" value="{{recipe.label}}">
+        {{#each recipe.ingredients}}
+          <input type="hidden" name="ingredients[]" value="{{this.text}}">
+        {{/each}}
+      </form>
+    </div>
   </div>
+  {{/each}}
 </div>
-{{/each}}
 
-
-
-  
