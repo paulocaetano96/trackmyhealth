@@ -1,167 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Pacifico', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 1.7;
-    color: #777;
-    padding:20px;
-  } 
-  
-  .header {
-    height: 95vh;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(37, 26, 123, 0.8),
-      rgba(20, 17, 77, 0.8)),
-      url('../images/big-home-img.jpg');
-    background-position: top;
-    background-size: cover;
-    /* now, we clip it to create a polygon. x y top left, x y top right, x y bottom right, x y bottom left */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  }
-  
-  .logo-box {
-    position: absolute;
-    top: 40px;
-    left:40px;
-  }
-  
-  .logo {
-    height: 15vw;
-  }
-  
-  .title-container{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+ background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+ color: white
+} 
+
+#login-form{
+	width: 350px;
+	height: 500px;
+	/* overflow: hidden; */ 
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+*/
+
+.login{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+.titles {
+    margin-top: 30px;
     text-align: center;
-  }
-  
-  /* heading primary */
-  .main-title {
-    color: white;
-    text-transform: uppercase;
-    margin-bottom:5vh;
-  }
-  
-  /* heading-primary-main */
-  .main-title-primary{
-    display: block;
-    font-size: 60px;
-    font-weight: 500;
-    letter-spacing: 35px;
-  
-    animation: slideRight 3s ease-out;
-  }
-  /* heading-primary-sub */
-  .main-title-secondary{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17px;
-    animation: slideLeft 3s ease-out;
-  }
-  
-  @keyframes slideRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  }
-  @keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  }
-  /* Buttons */
-  .log-sign-btn-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .log-sign-btn {
-    position: relative;
-    overflow: hidden;
-    padding: 12px 25px;
-    margin: 0px 3px 6px;
-    text-align: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 30px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    white-space: nowrap;
-    z-index: 0;
-    animation: rainbow-btn-home 5s linear infinite;;
-  
-  } 
-  
-  .log-sign-btn::before {
-    position: absolute;
-    content: "";
-    background: rgb(68, 79, 167);
-    transition-duration: 0.3s;
-    z-index: -1;
-    inset: 0px auto auto 0px;
-    width: 0px;
-    height: 100%;
-    opacity: 1;
-    border: 1px solid rgb(255, 255, 255);
-  } 
-  
-  
-  .log-sign-btn:hover::before {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-  } 
-  
-  
-  .log-sign-btn:hover {
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-    transition: all 0.3s ease 0s;
-  } 
-  
-  @keyframes rainbow-btn-home {
-    0% {
-      background-image: linear-gradient(rgba(26, 123, 66, 0.8), rgba(17, 75, 77, 0.8))
-    }
-    25% {
-      background-image: linear-gradient(rgba(57, 188, 179, 0.8), rgba(163, 52, 167, 0.8))
-    }
-    50% {
-      background-image: linear-gradient(rgba(124, 111, 219, 0.8), rgba(181, 85, 112, 0.8))
-    }
-    75% {
-      background-image: linear-gradient(rgba(199, 168, 58, 0.8), rgba(215, 121, 70, 0.8))
-    }
-    100% {
-      background-image: linear-gradient(rgba(131, 50, 189, 0.8), rgba(31, 66, 119, 0.8))
-    }
-    
-  }
-  
-  
+}
+
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+input{
+	width: 80%;
+	/* height: 20px; */ 
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 40px auto;   /* CANT SEEM TO GET THE BUTTON HIGHER UP*/ 
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+button:hover{
+	background: #6d44b8;
+}
+
