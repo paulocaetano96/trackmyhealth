@@ -1,24 +1,42 @@
+  <link rel="stylesheet" href="stylesheets/login.css">
+
 <div id="login-form">
-  <h2>Log In</h2>
+  <div class="titles">
+  <div class="login">
+  <h2 class="log-in-title">Log In</h2>
+  <p class="sub-title">Let's get started!</p>
+  </div>
   <form action="/auth/login" method="POST">
 
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
+    <label>
+      <input type="text" name="username" placeholder="Your Username" />
     </label>
 
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" />
+    <label> 
+      <input type="email" name="email" placeholder="Your Email" />
     </label>
 
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" />
+    <label> 
+      <input type="password" name="password" placeholder="Your Password" />
     </label>
 
-    <button type="submit">Log In</button>
+    <button type="submit" class="log-sign-btn">Log In</button>
 
+    <div>
+        <p>Don't have an account yet? <a class="sign-up-link" href="/signup">Sign Up</a></p> 
+    </div>
 
-    {{#if errorMessage}}
+   {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
-    {{/if}}
+    {{/if}} 
+
+    
   </form>
+{{!-- 
+  <form href="/signup"></form>
+    <div>
+        <button type="submit" class="XYYZ">Sign Up</button>
+    </div>
+--}}
+
 </div>
