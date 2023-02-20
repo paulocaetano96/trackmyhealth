@@ -6,16 +6,12 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-/* login route */
-router.get("/login", (req, res, next) => {
-  res.render("auth/login.hbs");
-});
+/* if login is sucessfull, sends us to the profile page */
 
-/* sign up route */
-router.get("/signup", (req, res, next) => {
-  res.render("auth/signup.hbs");
-});
-
+router.get("/profile", (req, res, next) => {
+  res.render("profile.hbs")
+})
+ 
 
 
 

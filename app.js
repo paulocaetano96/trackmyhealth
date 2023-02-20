@@ -9,6 +9,8 @@ require("./db");
 // https://www.npmjs.com/package/express
 const express = require("express");
 
+const axios = require('axios');
+
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
@@ -27,8 +29,17 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
 
+//handling the profile routes
+const profileRoutes = require("./routes/profile.routes");
+app.use("/profile", profileRoutes);
+
+//handling all the sign up/ login routes
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
+
+//handling all the recipe routes
+const recipeRoutes = require("./routes/recipes.routes");
+app.use("/recipes", recipeRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

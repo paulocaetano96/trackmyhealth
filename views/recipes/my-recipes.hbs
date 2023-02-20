@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/stylesheets/my-recipes.styles.css">
+
+<h1> MY RECIPES </h1>
+
+<p>2</p>
+
+<a href="/"><button>Home page</button></a>
+
+<br />
+
+<a href="/profile"><button>Profile page</button></a>
+
+<br />
+{{! --------------------------------------------------------------- }}
+
+<h2>RECIPE</h2>
+<div class="recipe-cards">
+{{#each data}}
+  <h2>{{recipe.label}}</h2>
+  {{#each recipe.ingredients}}
+    <p>{{text}}</p>
+
+  {{/each}}
+{{/each}}
+</div>
