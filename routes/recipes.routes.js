@@ -2,10 +2,13 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 
+const myAppId = process.env.APP_ID;
+const myAppKey = process.env.APP_KEY;
+
 router.get("/test", async (req, res, next) => {
   try {
     let response = await axios.get(
-      `https://api.edamam.com/api/recipes/v2?type=public&app_id=aec1e99b&app_key=09ad4047d6477e600633dadb368f19eb&ingr=4-10&diet=balanced&cuisineType=Mediterranean&mealType=Lunch&dishType=Main%20course&time=5-30&imageSize=REGULAR&random=true`
+      `https://api.edamam.com/api/recipes/v2?type=public&app_id=${myAppId}&app_key=${myAppKey}&ingr=4-10&diet=balanced&cuisineType=Mediterranean&mealType=Lunch&dishType=Main%20course&time=5-30&imageSize=REGULAR&random=true`
     );
 
     let data = response.data.hits;

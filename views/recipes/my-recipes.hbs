@@ -16,8 +16,8 @@
 <h2>RECIPE NAME</h2>
 {{#each data}}
 <h2>{{recipe.label}}</h2>
+    {{#each recipe.ingredients}}
+<p>{{text}}</p>
 
-<p>{{recipe.ingredients}}</p>
-
-
+{{/each}}
 {{/each}}
