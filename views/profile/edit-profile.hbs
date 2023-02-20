@@ -1,0 +1,32 @@
+<h1>EDIT PROFILE</h1>
+
+<p> OLA OLE OLE OLA OLE</p>
+
+<div id="edit-profile-form">
+  <h2>Edit profile</h2>
+  <form action="/auth/login" method="POST">
+
+    <label>
+      Username
+      <input type="text" name="username" placeholder="Your username" />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" placeholder="Your email" />
+    </label>
+
+    <label>
+      Password
+      <input type="password" name="password" placeholder="Your password" />
+    </label>
+
+    <button type="submit">Edit your profile! </button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+
+  <a href="/profile"><button>back to profile page</button></a>
+</div>  
