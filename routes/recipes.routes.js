@@ -9,7 +9,7 @@ router.get("/test", async (req, res, next) => {
     );
 
     let data = response.data.hits;
-    console.log(data.ingredients[0]);
+    /* console.log(data.hits.recipe); */
     res.render("recipes/my-recipes.hbs", { data: data });
   } catch (err) {
     console.log(err);
