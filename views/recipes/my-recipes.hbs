@@ -2,7 +2,6 @@
 
 <h1> MY RECIPES </h1>
 
-<p>2</p>
 
 <a href="/"><button>Home page</button></a>
 
@@ -13,13 +12,22 @@
 <br />
 {{! --------------------------------------------------------------- }}
 
-<h2>RECIPE</h2>
-<div class="recipe-cards">
+
 {{#each data}}
-  <h2>{{recipe.label}}</h2>
-  {{#each recipe.ingredients}}
-    <p>{{text}}</p>
+<div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h5 class={{recipe.label}}>{{recipe.label}}</h5>
+   
+    {{#each recipe.ingredients}}
+    <p class="card-text">{{text }}</p>
 
   {{/each}}
-{{/each}}
+   <a href="#" class="btn btn-primary">See or Edit Details</a>
+  </div>
 </div>
+{{/each}}
+
+
+
+  

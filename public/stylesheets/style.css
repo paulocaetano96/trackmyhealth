@@ -37,6 +37,11 @@ body {
   height: 15vw;
 }
 
+.navbar-link{
+  height: 500px;
+  background-color: white;
+}
+
 .title-container{
   position: absolute;
   top: 40%;
