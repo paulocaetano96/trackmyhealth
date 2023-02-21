@@ -22,8 +22,8 @@ const userSchema = new Schema(
     },
     recipes: [
       {
-        recipeName: String,
-        ingredients: [String],
+        type: Schema.Types.ObjectId,
+        ref: "Recipe"
       },
     ],
   },

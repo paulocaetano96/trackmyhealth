@@ -19,46 +19,99 @@
 <a href="/profile"><button>back to profile page</button></a>
 
 <div class="mealplan-area-container">
+  {{#each recipes}}
 
-  <div class="monday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+    <div class="monday">
+      {{#compare day "monday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
 
-  <div class="tuesday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
-  <div class="wednesday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+      {{/compare}}
+    </div>
 
-  <div class="thursday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+    <div class="tuesday">
+      {{#compare day "tuesday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
 
-  <div class="friday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+      {{/compare}}
+    </div>
 
-  <div class="saturday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+    <div class="wednesday">
+      {{#compare day "wednesday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
 
-  <div class="sunday">
-    <h2>{{label}}</h2>
-    <p>ingredients</p>
-    <p>{{ingredients}}</p>
-  </div>
+      {{/compare}}
+    </div>
+
+    <div class="thursday">
+      {{#compare day "thursday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
+
+      {{/compare}}
+    </div>
+
+    <div class="friday">
+      {{#compare day "friday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
+
+      {{/compare}}
+    </div>
+
+    <div class="saturday">
+      {{#compare day "saturday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
+
+      {{/compare}}
+    </div>
+
+    <div class="sunday">
+      {{#compare day "sunday"}}
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>ingredients</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>{{instructions}}</p>
+
+      {{/compare}}
+    </div>
+
+  {{/each}}
 
 </div>
