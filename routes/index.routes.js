@@ -13,6 +13,14 @@ router.get("/profile", (req, res, next) => {
 })
  
 
+//-------------- log out ---------------------------------------
+/* when the user is over, we log out */
+router.get("/logout", (req, res, next) => {
+   res.clearCookie('nToken');
+   
+  res.render('auth/logout');
+  
+});
 
 
 module.exports = router;

@@ -16,7 +16,7 @@ router.get("/my-recipes", async (req, res, next) => {
     );
 
     let data = response.data.hits;
-    console.log(response.data.hits);
+    /* console.log(response.data.hits); */
 
     res.render("recipes/my-recipes.hbs", { data: data });
   } catch (err) {
@@ -26,13 +26,13 @@ router.get("/my-recipes", async (req, res, next) => {
 });
 
 router.post("/my-recipes", async (req, res) => {
-  const { recipeName, ingredients, day, instructions } = req.body;
+  const { recipeName, ingredients, day } = req.body;
   console.log(req.body);
   const { _id } = req.session.currentUser;
 
   try {
     //Create the recipe
-    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day, instructions });
+    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day });
 
     //Add the recipe to the user
     const user = await User.findByIdAndUpdate(
@@ -40,7 +40,7 @@ router.post("/my-recipes", async (req, res) => {
       { $push: { recipes: newRecipe._id } },
       { new: true }
     );
-    /* console.log("user:", user); */
+    console.log("user:", user);
     res.redirect("/profile/my-recipes");
   } catch (err) {
     console.error(err);
@@ -54,7 +54,7 @@ router.get("/my-mealplan", async (req, res, next) => {
     const { _id } = req.session.currentUser;
 
     let user = await User.findById(_id).populate('recipes')
-   
+
     res.render("mealplan/my-mealplan.hbs", user);
   } catch (error) {
     console.log(error);

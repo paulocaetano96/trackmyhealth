@@ -37,6 +37,7 @@
           </select>
           <button type="submit" class="btn btn-primary">Add to mealplan</button>
           <input type="hidden" name="recipeName" value="{{recipe.label}}" />
+          <input type="hidden" name="instructions" value="{{recipe.url}}" />
           {{#each recipe.ingredients}}
             <input type="hidden" name="ingredients" value="{{this.text}}" />
           {{/each}}
