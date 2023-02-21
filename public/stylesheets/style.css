@@ -1,16 +1,24 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Medium.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins';
 }
 
 body {
-  font-family: 'Pacifico', cursive;
-  font-family: 'Roboto', sans-serif;
+ /* font-family: 'Pacifico', cursive;
+  font-family: 'Roboto', sans-serif; */ 
+  font-family: 'Poppins';
   font-weight: 400;
   font-size: 10px;
   line-height: 1.7;
   color: #777;
+  background-color: pink;
   /* padding:20px; */ 
 } 
 
@@ -27,6 +35,9 @@ body {
   /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
 }
 
+h1 {
+  font-family: 'Poppins';
+}
 .logo-box {
   position: absolute;
   top: 40px;
