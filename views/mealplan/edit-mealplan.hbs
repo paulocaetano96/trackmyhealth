@@ -1,7 +1,31 @@
+<link rel="stylesheet" href="/stylesheets/edit-mealplan.styles.css" />
+
 <h3>OLA MUNDO</h3>
 
 <form action="/recipes/my-recipes/edit/:id" method="post">
 
+  <div class="edit-recipe-area-container">
 
+    {{#each recipes}}
+
+      <div class="edit-recipe-card">
+        <label for="recipeName">Recipe name:</label>
+        <input type="text" id="" placeholder="{{name}}" />
+
+        <label for="ingredients">Ingredients</label>
+        {{#each ingredients}}
+          <input type="text" name="" id="" placeholder="{{this}}" />
+        {{/each}}
+        
+        {{!-- ask why this buttons are not working properly --}}
+    {{!--     <form action="/recipes/my-recipes/edit/{{_id}}" method="POST"><button type="submit">Edit Recipe</button></form>
+        <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit">Delete Recipe</button></form>
+
+ --}}
+      </div>
+
+    {{/each}}
+
+  </div>
 
 </form>

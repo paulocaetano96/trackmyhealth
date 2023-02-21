@@ -58,10 +58,13 @@ router.get("/my-mealplan", async (req, res, next) => {
     res.render("mealplan/my-mealplan.hbs", user);
   } catch (error) {
     console.log(error);
-    next(error)
+    next(error) 
   }
 
 });
+
+
+
 
 /* Sends us to the edit-profile page*/
 router.get("/edit-profile", (req, res, next) => {
