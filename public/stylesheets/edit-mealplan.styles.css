@@ -1,0 +1,14 @@
+.edit-recipe-area-container{
+background-color: orange;
+height: 95vh;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.edit-recipe-card{
+background-color: red;
+display: flex;
+flex-direction: column;
+}
