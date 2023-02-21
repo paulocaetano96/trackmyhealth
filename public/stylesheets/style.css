@@ -1,15 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
 }
 
 body {
- /* font-family: 'Pacifico', cursive;
-  font-family: 'Roboto', sans-serif; */ 
-  font-family: 'Poppins';
+  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto', sans-serif;font-family: 'Poppins';
   font-weight: 400;
   font-size: 10px;
   line-height: 1.7;
@@ -70,11 +67,7 @@ body {
   background-position: top;
   background-size: cover;
   /* now, we clip it to create a polygon. x y top left, x y top right, x y bottom right, x y bottom left */
-   /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);  */
-}
-
-h1 {
-  font-family: 'Poppins';
+  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
 }
 
 .logo-box {
@@ -85,9 +78,7 @@ h1 {
 }
 
 .logo {
-  height: 7vw;
-  width: 60px;
-  height: auto;
+  height: 15vw;
 }
 
 .container {
