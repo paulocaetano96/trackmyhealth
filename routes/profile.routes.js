@@ -26,13 +26,13 @@ router.get("/my-recipes", async (req, res, next) => {
 });
 
 router.post("/my-recipes", async (req, res) => {
-  const { recipeName, ingredients, day } = req.body;
+  const { recipeName, ingredients, day, instructions } = req.body;
   console.log(req.body);
   const { _id } = req.session.currentUser;
 
   try {
     //Create the recipe
-    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day });
+    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day, instructions });
 
     //Add the recipe to the user
     const user = await User.findByIdAndUpdate(
