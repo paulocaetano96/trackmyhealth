@@ -16,11 +16,17 @@ router.get("/profile", (req, res, next) => {
 //-------------- log out ---------------------------------------
 /* when the user is over, we log out */
 router.get("/logout", (req, res, next) => {
-   res.clearCookie('nToken');
-   
-  res.render('auth/logout');
+  // Clear the authentication token cookie
+  res.clearCookie('nToken');
   
+  // Destroy the user's session
+  req.session.destroy(function(err) {
+    if (err) {
+      console.error(err);
+    }
+    // Redirect the user to the logout page
+    res.render('auth/logout');
+  });
 });
-
 
 module.exports = router;

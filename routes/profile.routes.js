@@ -26,13 +26,13 @@ router.get("/my-recipes", async (req, res, next) => {
 });
 
 router.post("/my-recipes", async (req, res) => {
-  const { recipeName, ingredients, day } = req.body;
+  const { recipeName, ingredients, day, instructions } = req.body;
   console.log(req.body);
   const { _id } = req.session.currentUser;
 
   try {
     //Create the recipe
-    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day });
+    let newRecipe = await Recipe.create({ name: recipeName, ingredients, day, instructions });
 
     //Add the recipe to the user
     const user = await User.findByIdAndUpdate(
@@ -58,10 +58,13 @@ router.get("/my-mealplan", async (req, res, next) => {
     res.render("mealplan/my-mealplan.hbs", user);
   } catch (error) {
     console.log(error);
-    next(error)
+    next(error) 
   }
 
 });
+
+
+
 
 /* Sends us to the edit-profile page*/
 router.get("/edit-profile", (req, res, next) => {

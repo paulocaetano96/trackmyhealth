@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/stylesheets/my-mealplan.styles.css" />
+
 <h1>MY-MEALPLAN </h1>
 
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit perspiciatis
@@ -18,50 +20,89 @@
 
 <a href="/profile"><button>back to profile page</button></a>
 
+
 <div class="mealplan-area-container">
+  <div class="card-rows">
+    {{#each recipes}}
+      <div class="col-4 day-card">
+        <h2>{{day}}</h2>
+        <h2>{{name}}</h2>
+        <p>Ingredients:</p>
+        {{#each ingredients}}
+          <p>{{this}}</p>
+        {{/each}}
+        <p>Instructions:</p>
+        <a href="{{instructions}}" target="_blank"><p>{{instructions}}</p></a>
+        <a href="/recipes/my-recipes/edit/{{_id}}"><button>Edit recipe</button></a>
+        <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit">Delete Recipe</button></form>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+
+
+{{!-- <div class="mealplan-area-container">
   {{#each recipes}}
 
-    <div class="monday">
-      {{#compare day "monday"}}
-        <h2>{{day}}</h2>
-        <h2>{{name}}</h2>
-        <p>ingredients</p>
-        {{#each ingredients}}
-          <p>{{this}}</p>
-        {{/each}}
-        <p>{{instructions}}</p>
+    <section class="monday-tuesday-wednesday">
+      <div class="monday day-card">
+        {{#compare day "Monday"}}
+          <h2>{{day}}</h2>
+          <h2>{{name}}</h2>
+          <p>ingredients</p>
+          {{#each ingredients}}
+            <p>{{this}}</p>
+          {{/each}}
+          <p>Instructions</p>
+          <a href="{{instructions}}"><p>{{instructions}}</p></a>
+          <a href="/recipes/my-recipes/edit/{{_id}}"><button>Edit recipe</button></a>
+           <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit">Delete Recipe</button></form>
+      
+        {{/compare}}
+      </div>
+      {{/each}}
 
-      {{/compare}}
-    </div>
+      </section>
+  
+{{#each recipes}}
+      <div class="tuesday day-card">
+        {{#compare day "Tuesday"}}
+          <h2>{{day}}</h2>
+          <h2>{{name}}</h2>
+          <p>ingredients</p>
+          {{#each ingredients}}
+            <p>{{this}}</p>
+          {{/each}}
+          <p>Instructions</p>
+          <a href="{{instructions}}"><p>{{instructions}}</p></a>
 
-    <div class="tuesday">
-      {{#compare day "tuesday"}}
-        <h2>{{day}}</h2>
-        <h2>{{name}}</h2>
-        <p>ingredients</p>
-        {{#each ingredients}}
-          <p>{{this}}</p>
-        {{/each}}
-        <p>{{instructions}}</p>
+        {{/compare}}        
+      </div>
+{{/each}}
 
-      {{/compare}}
-    </div>
+{{#each recipes}}
+      <div class="wednesday day-card">
+        {{#compare day "Wednesday"}}
+          <h2>{{day}}</h2>
+          <h2>{{name}}</h2>
+          <p>ingredients</p>
+          {{#each ingredients}}
+            <p>{{this}}</p>
+          {{/each}}
+          <p>Instructions</p>
+          <a href="{{instructions}}"><p>{{instructions}}</p></a>
+        {{/compare}}
+          
+      </div>
+      {{/each}}
+    </section>
 
-    <div class="wednesday">
-      {{#compare day "wednesday"}}
-        <h2>{{day}}</h2>
-        <h2>{{name}}</h2>
-        <p>ingredients</p>
-        {{#each ingredients}}
-          <p>{{this}}</p>
-        {{/each}}
-        <p>{{instructions}}</p>
 
-      {{/compare}}
-    </div>
-
-    <div class="thursday">
-      {{#compare day "thursday"}}
+  <section class="thursday-friday">
+    {{#each recipes}}
+    <div class="thursday day-card">
+      {{#compare day "Thursday"}}
         <h2>{{day}}</h2>
         <h2>{{name}}</h2>
         <p>ingredients</p>
@@ -69,50 +110,58 @@
           <p>{{this}}</p>
         {{/each}}
         <p>Instructions</p>
-        <p>{{instructions}}</p>
-
+        <a href="{{instructions}}"><p>{{instructions}}</p></a>
       {{/compare}}
     </div>
+    {{/each}}
 
-    <div class="friday">
-      {{#compare day "friday"}}
+{{#each recipes}}
+    <div class="friday day-card">
+      {{#compare day "Friday"}}
         <h2>{{day}}</h2>
         <h2>{{name}}</h2>
         <p>ingredients</p>
         {{#each ingredients}}
           <p>{{this}}</p>
         {{/each}}
-        <p>{{instructions}}</p>
-
+        <p>Instructions</p>
+        <a href="{{instructions}}"><p>{{instructions}}</p></a>
       {{/compare}}
     </div>
+    {{/each}}
+  </section>
 
-    <div class="saturday">
-      {{#compare day "saturday"}}
+  <section class="thursday-friday">
+    {{#each recipes}}
+    <div class="saturday day-card">
+      {{#compare day "Saturday"}}
         <h2>{{day}}</h2>
         <h2>{{name}}</h2>
         <p>ingredients</p>
         {{#each ingredients}}
           <p>{{this}}</p>
         {{/each}}
-        <p>{{instructions}}</p>
-
+        <p>Instructions</p>
+        <a href="{{instructions}}"><p>{{instructions}}</p></a>
       {{/compare}}
     </div>
+    {{/each}}
 
-    <div class="sunday">
-      {{#compare day "sunday"}}
+{{#each recipes}}
+    <div class="sunday day-card">
+      {{#compare day "Sunday"}}
         <h2>{{day}}</h2>
         <h2>{{name}}</h2>
         <p>ingredients</p>
         {{#each ingredients}}
           <p>{{this}}</p>
         {{/each}}
-        <p>{{instructions}}</p>
-
+        <p>Instructions</p>
+        <a href="{{instructions}}"><p>{{instructions}}</p></a>
       {{/compare}}
     </div>
+  </section>
 
   {{/each}}
 
-</div>
+</div>  --}}

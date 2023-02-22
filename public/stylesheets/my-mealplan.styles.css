@@ -1,0 +1,52 @@
+
+
+.card-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+.col-4 {
+    /* width: calc(100% / 5); */
+    width:250px;
+  }
+
+  .day-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+
+/* .mealplan-area-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.day-card{
+    background-color: rgb(114, 237, 239);
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+    
+}
+
+.monday-tuesday-wednesday {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    height: 100vh;
+    flex-wrap: wrap;
+
+} */
+
+
+    
+  
+  
+  
+  
