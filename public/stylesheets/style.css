@@ -498,3 +498,14 @@ button:hover{
   align-items: center;
   color: black;
 }
+
+/* error page */ 
+
+.single-message-page {
+  /* margin: 250px; */ 
+  padding: 200px;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
