@@ -9,6 +9,10 @@
     {{#each recipes}}
 
       <div class="edit-recipe-card">
+
+        <label for="day">Recipe Day</label>
+        <input type="text" id="" placeholder="{{day}}" />
+
         <label for="recipeName">Recipe name:</label>
         <input type="text" id="" placeholder="{{name}}" />
 
@@ -18,10 +22,11 @@
         {{/each}}
         
         {{!-- ask why this buttons are not working properly --}}
-    {{!--     <form action="/recipes/my-recipes/edit/{{_id}}" method="POST"><button type="submit">Edit Recipe</button></form>
+        
+        <form action="/recipes/my-recipes/edit/{{_id}}" method="POST"><button type="submit">Edit Recipe</button></form>
         <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit">Delete Recipe</button></form>
 
- --}}
+
       </div>
 
     {{/each}}
