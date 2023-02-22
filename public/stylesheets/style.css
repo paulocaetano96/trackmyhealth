@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -79,7 +80,7 @@ body {
   background-position: top;
   background-size: cover;
   /* now, we clip it to create a polygon. x y top left, x y top right, x y bottom right, x y bottom left */
-  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+   /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);  */
 }
 
 h1 {
