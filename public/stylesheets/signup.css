@@ -5,9 +5,9 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-family: 'Roboto', sans-serif;
- background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
- color: white
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(to bottom, rgb(227,223,220) 11.2%, rgb(227,223,220) 11.2%, rgb(149,156,129) 100.2%);
+ 	color: white
 } 
 
 #form{
@@ -33,17 +33,17 @@ body{
 
 label{
 	color: #fff;
-	font-size: 2.3em;
+	font-size: 1em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 25px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
 
 input{
-	width: 80%;
+	width: 70%;
 	/* height: 20px; */ 
 	background: #e0dede;
 	justify-content: center;
@@ -56,7 +56,7 @@ input{
 button{
 	width: 60%;
 	height: 40px;
-	margin: 40px auto;   /* CANT SEEM TO GET THE BUTTON HIGHER UP*/ 
+	margin: 40px auto;  
 	justify-content: center;
 	display: block;
 	color: #fff;
@@ -77,3 +77,4 @@ button:hover{
 .log-in-link {
     color:#896ebb
 }
+

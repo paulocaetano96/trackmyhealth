@@ -14,11 +14,13 @@ body {
   font-size: 10px;
   line-height: 1.7;
   color: #777;
+  background: #C1E1C1;
+}
   /* background: linear-gradient(to bottom, rgb(251, 250, 225) 11.2%, rgb(206, 240, 185) 47.5%, rgb(100, 163, 111) 100.2%); */
   /* background: linear-gradient(to bottom, rgb(227,223,220) 11.2%, rgb(227,223,220) 11.2%, rgb(149,156,129) 100.2%); */
   
   /* padding:20px; */ 
-} 
+
 
 .nav {
   background-color: white;
@@ -321,3 +323,5 @@ h1 {
   height: auto;
   width: 30%;
 }
+
+
