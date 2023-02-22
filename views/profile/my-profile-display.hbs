@@ -1,13 +1,15 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 
-<h1>EDIT PROFILE</h1>
+<h1>My profile</h1>
 
-<p> OLA OLE OLE OLA OLE</p>
+<p> O meu perifleeeeeeeee lelelele</p>
 
 <div id="edit-profile-form">
-  <h2>Edit profile</h2>
-  <form action="/profile/edit-profile/{{_id}}" method="POST">
+  
+  <form action="/auth/login" method="POST">
 
+
+    {{#each user}}
     <label>
       Username
       <input type="text" name="username" value="{{username}}" />
@@ -15,22 +17,22 @@
 
     <label>
       Email
-      <input type="email" name="email" value="{{email}}" />
+      <input type="email" name="email" placeholder="Your email" />
     </label>
 
     <label>
       Password
-      <input type="password" name="password" value="{{password}}" />
+      <input type="password" name="password" placeholder="Your password" />
     </label>
 
-    <a href="/edit-profile"><button>Edit User information</button></a>
+    <button type="submit">Edit your profile! </button>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-
-
-
+{{/each}}
   <a href="/profile"><button>back to profile page</button></a>
+
+  
 </div>  

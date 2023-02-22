@@ -4,7 +4,9 @@
 
 <div class="edit-recipe-area-container">
 
-  {{#each recipes}}
+    {{#each recipes}}
+  <div class="edit-recipe-card">
+      <form action="/recipes/my-recipes/edit/{{_id}}" method="post">
 
     <div class="edit-recipe-card">
       <form action="/recipes/my-recipes/edit/{{_id}}" method="POST">
@@ -12,7 +14,7 @@
         <input type="text" name="day" id="day" value="{{day}}" />
 
         <label for="recipeName">Recipe name:</label>
-        <input type="text" name="name" id="name" value="{{name}}" va />
+        <input type="text" name="name" id="name" value="{{name}}" />
 
         <label for="ingredients">Ingredients</label>
         {{#each ingredients}}
@@ -25,13 +27,13 @@
         {{/each}}
 
         {{! ask why this buttons are not working properly }}
+
         <button type="submit">Edit Recipe</button></form>
       <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button
           type="submit"
         >Delete Recipe</button></form>
 
-    </div>
+  </div>
 
-  {{/each}}
-
+    {{/each}}
 </div>
