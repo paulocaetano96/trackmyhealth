@@ -6,33 +6,31 @@
 
 <div id="edit-profile-form">
   <h2>Edit profile</h2>
-  <form action="/auth/login" method="POST">
-
-{{#each user}}
+  <form action="/profile/edit-profile/{{_id}}" method="POST">
 
     <label>
       Username
-      <input type="text" name="username" placeholder="{{username}}" />
+      <input type="text" name="username" value="{{username}}" />
     </label>
 
     <label>
       Email
-      <input type="email" name="email" placeholder="Your email" />
+      <input type="email" name="email" value="{{email}}" />
     </label>
 
     <label>
       Password
-      <input type="password" name="password" placeholder="Your password" />
+      <input type="password" name="password" value="{{password}}" />
     </label>
 
-    <button type="submit">Edit your profile! </button>
+    <a href="/edit-profile"><button>Edit User information</button></a>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 
-  {{/each}}
+
 
   <a href="/profile"><button>back to profile page</button></a>
 </div>  

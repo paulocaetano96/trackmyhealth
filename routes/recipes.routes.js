@@ -3,6 +3,8 @@ const router = express.Router();
 const axios = require("axios");
 const Recipe = require("../models/Recipe.model");
 const User = require("../models/User.model");
+const mongoose = require("mongoose");
+
 
 
 //we create a recipe-edit hbs page */
@@ -48,24 +50,30 @@ router.get('/my-recipes/edit/:id', async (req, res, next) => {
   });
 
 
-   
   // Submit info to edit a character with a matching id.
-  router.post('/my-recipes/edit/:id', (req, res) => {
-    const recipesId = req.params.id;
-    const recipesInfo = req.body;
-   
-    editRecipes = (recipesId, recipesInfo) => {
-        this.response.put(`/my-mealplan/${recipesId}`, recipesInfo);
-
-      }
-    Recipe
-      .editRecipes(recipesId, recipesInfo)
-      .then((response) => {
-        res.json(response.data);
-        // res.redirect('/profile/my-mealplan'); // <== leave this line commented for now
-      })
-      .catch((error) => console.log(error));
+  router.post("/my-recipes/edit/:id", async (req, res, next) => {
+    const { id } = req.params;
+  
+    const { name, ingredients, day } = req.body;
+  
+    try {
+      const recipe = await Recipe.findByIdAndUpdate(id, {
+        name,
+        ingredients,
+        day,
+      });
+  
+      console.log("_______________", recipe);
+  
+      res.redirect("/profile/my-mealplan");
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
   });
+
+
+
 
 
 
