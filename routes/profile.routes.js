@@ -64,16 +64,67 @@ router.get("/my-mealplan", async (req, res, next) => {
 });
 
 
-
-
-/* Sends us to the edit-profile page*/
-router.get("/edit-profile", (req, res, next) => {
-  res.render("profile/edit-profile.hbs");
-});
-
-/* Sends us to the favorites page*/
+/* --------------------  Sends us to the favorites page .------------------*/
 router.get("/favorites", (req, res, next) => {
   res.render("favorites/favorites.hbs");
 });
+
+
+
+/* ------------------------- Sends us to the my-profile-display page -----------------------------*/
+router.get("/edit-profile", async (req, res, next) => {
+  try {
+
+    const { username, email, password } = req.body
+    let user = await User.findById({ username, email, password })
+    console.log(user)
+    
+    res.render("profile/edit-profile", user);
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
+
+
+/* 
+router.post("/edit-profile/:id", fileUploader.single('poster'), async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { username, description, currentImage } = req.body;
+    console.log(username);
+    console.log(req.body);
+    let imageUrl;
+
+    if (req.file) {
+      imageUrl = req.file.path;
+    } else {
+      imageUrl = currentImage;
+    }
+
+    let updatedUser = await User.findByIdAndUpdate(
+      id,
+      { username, description, imageUrl },
+      { new: true }
+    );
+
+    req.session.currentUser = updatedUser;
+
+    res.redirect("/profile");
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}); */
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;

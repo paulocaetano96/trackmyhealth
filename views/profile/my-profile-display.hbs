@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 
-<h1>EDIT PROFILE</h1>
+<h1>My profile</h1>
 
-<p> OLA OLE OLE OLA OLE</p>
+<p> O meu perifleeeeeeeee lelelele</p>
 
 <div id="edit-profile-form">
-  <h2>Edit profile</h2>
+  
   <form action="/auth/login" method="POST">
 
-{{#each user}}
 
+    {{#each user}}
     <label>
       Username
-      <input type="text" name="username" placeholder="{{username}}" />
+      <input type="text" name="username" value="{{username}}" />
     </label>
 
     <label>
@@ -31,8 +31,8 @@
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-
-  {{/each}}
-
+{{/each}}
   <a href="/profile"><button>back to profile page</button></a>
+
+  
 </div>  
