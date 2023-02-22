@@ -10,7 +10,7 @@ router.get("/my-mealplan/edit/:id", async (req, res) => {
     res.render('/views/mealplan/edit-mealplan.hbs')
 })
 
-
+//to delete a recipe that we have on our mealplan
 router.post('/my-recipes/delete/:id', async (req,res,next) => {
     try {
         
