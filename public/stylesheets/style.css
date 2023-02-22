@@ -488,3 +488,12 @@ button:hover{
 .log-in-link {
   color:#896ebb
 }
+
+.footer {
+  background-color: #FFFAF1;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  align-items: center;s
+  color: black;
+}
