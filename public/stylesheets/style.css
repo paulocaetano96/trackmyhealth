@@ -85,13 +85,9 @@ h1 {
 }
 
 .logo {
-<<<<<<<<< Temporary merge branch 1
   height: 7vw;
   width: 60px;
   height: auto;
-=========
-  height: 15vw;
->>>>>>>>> Temporary merge branch 2
 }
 
 .container {
