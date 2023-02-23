@@ -1,11 +1,14 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/edit-profile-styles.css" />
 
-<h1>EDIT PROFILE</h1>
+  <div class="page-title-container">
+    <h1>Edit profile</h1>
+  </div>
 
-<p> OLA OLE OLE OLA OLE</p>
+<div class="editprofile-fullarea-container">
 
 <div id="edit-profile-form">
-  <h2>Edit profile</h2>
+  <div class="card-body">
   <form action="/profile/edit-profile/{{_id}}" method="POST">
 
     <label>
@@ -25,6 +28,7 @@
 
     <a href="/edit-profile"><button>Edit User information</button></a>
 
+  </div>
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
@@ -33,4 +37,8 @@
 
 
   <a href="/profile"><button>back to profile page</button></a>
-</div>  
+
+
+  </div> 
+
+</div>

@@ -1,38 +1,44 @@
 <link rel="stylesheet" href="/stylesheets/edit-mealplan.styles.css" />
+<link rel="stylesheet" href="/stylesheets/style.css" />
+
 
 <h3>OLA MUNDO</h3>
 
 <div class="edit-recipe-area-container">
 
     {{#each recipes}}
-  <div class="edit-recipe-card">
-      <form action="/recipes/my-recipes/edit/{{_id}}" method="post">
-
+  <div class="edit-recipe-card-area">
     <div class="edit-recipe-card">
+
+      <form action="/recipes/my-recipes/edit/{{_id}}" method="post">
+    
       <form action="/recipes/my-recipes/edit/{{_id}}" method="POST">
-        <label for="day">Recipe Day</label>
-        <input type="text" name="day" id="day" value="{{day}}" />
+        <label for="day" class="edit-meal-label">Recipe Day</label>
+        <input type="text" name="day" id="day" value="{{day}}" class="edit-meal-input" />
 
-        <label for="recipeName">Recipe name:</label>
-        <input type="text" name="name" id="name" value="{{name}}" />
+        <label for="recipeName" class="edit-meal-label">Recipe name:</label>
+        <input type="text" name="name" id="name" value="{{name}}" class="edit-meal-input" />
 
-        <label for="ingredients">Ingredients</label>
+        <label for="ingredients" class="edit-meal-label">Ingredients</label>
         {{#each ingredients}}
           <input
             type="text"
             name="ingredients"
             id="ingredients"
             value="{{this}}"
+            class="edit-meal-input"
           />
         {{/each}}
 
         {{! ask why this buttons are not working properly }}
+      <div class="edit-delete-buttons-area">
+        <button type="submit" class="edit-delete-btn">Edit Recipe</button></form>
 
-        <button type="submit">Edit Recipe</button></form>
-      <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button
-          type="submit"
-        >Delete Recipe</button></form>
+        <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button
+          type="submit" class="edit-delete-btn">Delete Recipe</button></form>
+      </div>
 
+    </div>
   </div>
 
     {{/each}}

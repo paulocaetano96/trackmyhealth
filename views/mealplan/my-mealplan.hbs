@@ -1,34 +1,37 @@
-<link rel="stylesheet" href="/stylesheets/style.css" />
 <link rel="stylesheet" href="/stylesheets/my-mealplan.styles.css" />
+<link rel="stylesheet" href="/stylesheets/style.css" />
 
-<h1>MY-MEALPLAN</h1>
 
+<h1 class="page-title-container">My mealplan</h1>
 
-<div class="mealplan-area-container">
-    
+<div class="entire-area">
+ 
     {{#each recipes}}
-    <div class="card">
-      <div class="card-body">
-        <h2>{{day}}</h2>
-        
-        <h2>{{name}}</h2>
-        <p>Ingredients:</p>
+     <div class="mealplan-days-area">
+      <div class="mealplan-card">
+        <h2 class="recipe-day">{{day}}</h2>
+        <h2 class="recipe-name">{{name}}</h2>
         {{#each ingredients}}
-          <p>{{this}}</p>
+          <p class="mealplan-card-text">{{this}}</p>
         {{/each}}
-        <p>Instructions:</p>
+        <p><span id="instructions">Instructions (Link)</span></p>
         <a href="{{instructions}}" target="_blank"><p>{{instructions}}</p></a>
-        <a href="/recipes/my-recipes/edit/{{_id}}"><button>Edit recipe</button></a>
-        <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit">Delete Recipe</button></form>
+
+        <div class="edit-delete-buttons-area">
+          <a href="/recipes/my-recipes/edit/{{_id}}" ><button class="edit-delete-btn">Edit recipe</button></a>
+          <form action="/recipes/my-recipes/delete/{{_id}}" method="POST"><button type="submit" class="edit-delete-btn">Delete Recipe</button></form>
+        </div>
+
+        </div>
       </div>
     {{/each}}
-  </div>
-</div>
+  
+ </div>
 
 <br>
-
-<a href="/profile"><button>back to profile page</button></a>
-
+  <div class="lower-button-profilepage-area">
+    <a href="/profile"><button class="lower-button-profilepage">back to profile page</button></a>
+  </div>
 
 {{!-- <div class="mealplan-area-container">
   {{#each recipes}}
