@@ -59,7 +59,6 @@ body {
   text-decoration: none;
   display: block;
   width: 100%;
-  
 }
 .navigation-menu li a button {
   border: none;
@@ -216,27 +215,7 @@ h1 {
   transition: all 0.3s ease 0s;
 } 
 
-/*
 
-@keyframes rainbow-btn-home {
-  0% {
-    background-image: linear-gradient(rgba(26, 123, 66, 0.8), rgba(17, 75, 77, 0.8))
-  }
-  25% {
-    background-image: linear-gradient(rgba(57, 188, 179, 0.8), rgba(163, 52, 167, 0.8))
-  }
-  50% {
-    background-image: linear-gradient(rgba(124, 111, 219, 0.8), rgba(181, 85, 112, 0.8))
-  }
-  75% {
-    background-image: linear-gradient(rgba(199, 168, 58, 0.8), rgba(215, 121, 70, 0.8))
-  }
-  100% {
-    background-image: linear-gradient(rgba(131, 50, 189, 0.8), rgba(31, 66, 119, 0.8))
-  }
-  
-}
-*/ 
 #login-form {
     margin: 0;
     padding: 0;
@@ -267,6 +246,7 @@ h1 {
   color: darkolivegreen;
   font-family: 'Roboto', sans-serif;
   margin: 5%;
+  margin-bottom: 5px;
 }
 
 .h2-title-about {
@@ -332,6 +312,15 @@ h1 {
 
 }
 
+#index-image-1 {
+  opacity: 80%;
+  margin-top: 20px;
+}
+
+#index-image-2 {
+  margin-bottom: 20px;
+}
+
 .about-photo-1{
   padding-bottom: 3vh;
 }
@@ -387,13 +376,12 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 	align-items: center;
-  /* height: 500px; */ 
+  /* height: 500px;  */
 }
 
 .block{
 	width: 33,33%;
 	height: auto;
-	/* overflow: hidden; */ 
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
@@ -408,6 +396,33 @@ h1 {
   cursor: pointer;
 }
 
+
+
+/* NEW RESPONSIVE !!
+
+  .my-blocks {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0;
+  }
+  
+  .block{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    margin: 30px;
+    text-align: center;
+    background-color: #FFFAF1;
+  }
+  .block:hover {
+    transform: translate3D(0,-1px,0) scale(1.03); 
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .4s ease; 
+    cursor: pointer;
+  }
+
+  */ 
 .column {
   padding: 40px;
   height:auto;
@@ -426,6 +441,7 @@ h1 {
 
 /* login and sign-up pages */ 
 
+
 #login-sign-up-form{
 	width: 350px;
 	height: 500px;
@@ -435,8 +451,10 @@ h1 {
 	box-shadow: 5px 20px 50px #0000005c;
   margin: auto;
 }
-*/
 
+.go-back-link {
+  padding-top: 10%;
+}
 .login{
 	position: relative;
 	width:100%;
@@ -529,13 +547,15 @@ button:hover{
 .footer {
   background-color: #FFFAF1;
   display: flex;
-  align-items: flex-end;
-  height:70px
+  align-items: flex-end; 
+  height:70px;
+  text-align: center;
+  justify-content: center;
   
 }
 
 .footer-text {
-  width: 100vw;
+  width: 1OO%;
   display: flex;
   justify-content: center;
   align-items: center;
