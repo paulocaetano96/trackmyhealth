@@ -56,13 +56,31 @@ body {
 
 }
 
+.card-body {
+  color: #000000;
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  box-shadow: 0px 0px 50vw 50vw rgba(0,0,0,0.36);
+  background-color: rgb(254, 255, 232);
+}
+
+
 .card {
   margin-top: 5vh;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   font-size: 13px;;
-  line-height: 12px;
+  line-height: 14px;
 }
 
 #recipe-name {
@@ -83,13 +101,9 @@ body {
 
 #instructions {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 16px;
+
 }
-/* .day-button-area{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
 
 
 
