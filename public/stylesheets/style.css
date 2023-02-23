@@ -270,13 +270,14 @@ h1 {
 }
 
 .h2-title-about {
-  font-size:7em;
+  font-size:6em;
   text-align: center;
 
 }
 
 .section-about-title1 {
   font-size: 3em;
+  font-weight: bold;
   width: 25vw;
   
 }
@@ -329,6 +330,10 @@ h1 {
   flex-wrap: wrap;
   align-content: center;
 
+}
+
+.about-photo-1{
+  padding-bottom: 3vh;
 }
  
  .text-section {
@@ -509,7 +514,7 @@ button:hover{
 	box-shadow: 5px 20px 50px #0000005c;
   margin: auto;
 }
-*/
+
 
 .signup{
 	position: relative;
@@ -553,3 +558,29 @@ button:hover{
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 880px) {
+  .section-about-title1 {
+    font-size:20px;
+    font-weight: bold;
+  }
+
+  .paragraph{
+    font-size: 14px;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
