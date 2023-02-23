@@ -1,4 +1,4 @@
-.recipe-cards{
+/* .recipe-cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,4 +17,11 @@
     text-align: center;
     justify-content: center;
     margin-top:10px;
+} */
+
+.page-title-container h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 4vh;
 }
+
