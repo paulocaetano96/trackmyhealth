@@ -264,14 +264,14 @@ h1 {
   }
 */
 .section-about {
-  color: #777;
+  color: darkolivegreen;
   font-family: 'Roboto', sans-serif;
+  margin: 5%;
 }
 
 .h2-title-about {
   font-size:7em;
   text-align: center;
-  padding-top: 50px;
 
 }
 
@@ -312,25 +312,53 @@ h1 {
   }*/
   
 .section-about-middle {
-  display: flex;
   flex: auto;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .section-about-images-container {
-  width: 50%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
 
 }
+ 
+ .text-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+ /* margin-left: 13%; */
+  margin-right: 13%;
+}
 
+
+.section-about-middle {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.info-text {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
 
 .about-images {
   height: auto;
-  width: 30%;
+  width: 100%;
+}
+
+.section-about-images-container {
+  margin-top: 10%;
+  
 }
 
 /* profile page */ 
