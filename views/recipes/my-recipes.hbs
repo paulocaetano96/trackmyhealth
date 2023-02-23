@@ -1,14 +1,19 @@
+
+<link rel="stylesheet" href="/stylesheets/style.css" />
 <link rel="stylesheet" href="/stylesheets/my-recipes.styles.css" />
 
-<h1> MY RECIPES </h1>
-
-<a href="/"><button>Home page</button></a>
-
-<br />
-
-<a href="/profile"><button>Profile page</button></a>
+<div class="page-title-container">
+  <h1> MY RECIPES </h1>
+</div>
+{{! <a href="/"><button>Home page</button></a>
 
 <br />
+
+<a href="/profile"><button>Profile page</button></a> }}
+
+
+
+<hr >
 {{! --------------------------------------------------------------- }}
 
 <div class="recipe-cards">
@@ -23,7 +28,7 @@
         <div>
           <p><span>Instructions:</span></p>
           <p><span><a href="{{recipe.url}}">{{recipe.url}}</a></span></p>
-          
+
         </div>
         <form method="POST" action="/profile/my-recipes">
           <select name="day" id="day">
