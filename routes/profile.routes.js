@@ -70,7 +70,6 @@ router.get("/favorites", (req, res, next) => {
 });
 
 
-
 /* ------------------------- Sends us to the my-profile-display page -----------------------------*/
 router.get("/edit-profile", async (req, res, next) => {
   try {
