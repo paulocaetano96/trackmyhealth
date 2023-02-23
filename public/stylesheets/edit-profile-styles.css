@@ -1,0 +1,24 @@
+
+.page-title-container h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  font-weight: bold;
+  width: 100vw;
+}
+
+.editprofile-fullarea-container{
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+#edit-profile-form {
+  width: 100vw;
+}
+
+
+
