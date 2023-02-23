@@ -277,9 +277,12 @@ h1 {
 
 .section-about-title1 {
   font-size: 3em;
+  width: 25vw;
+  
 }
 .paragraph {
   font-size: 2em;
+  width: 25vw;
 }
 .section-about-text-container {
   width:40%;
@@ -316,6 +319,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  margin-left: 12vw;
 }
 
 .section-about-images-container {
@@ -353,7 +357,7 @@ h1 {
 
 .about-images {
   height: auto;
-  width: 100%;
+  width: 25vw;
 }
 
 .section-about-images-container {
