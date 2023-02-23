@@ -1,24 +1,36 @@
-/* .recipe-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border: 5px solid black;
-    background-color: red;
+
+.page-title-container h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  font-weight: bold;
 }
 
-#recipe-name{
-    padding-top: 15px;
-    padding-bottom: 15px;
+.recipe-cards-fullarea-container{
+  width: 100vw;
+  Display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-cards-fullarea-container{
+  Display: flex;
+  justify-content: space-evenly;
 }
 
 .card {
-    height:90vh;
-    text-align: center;
-    justify-content: center;
-    margin-top:10px;
-} */
 
+  height: 85vh;
+  width: 20vw;
+  margin-top: 4vh;
+  
+
+}
+
+
+/* ----------------------------- REJECTED CHANGES ---------------------------------------*/
+
+/* 
 body {
   margin: 0;
   padding: 0;
@@ -33,12 +45,6 @@ body {
   padding-bottom: 2vh;
   font-weight: bold;
 }
-
-/* .horizontal-line-title {
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-} */
 
 .recipe-cards-fullarea-container {
   display: flex;
@@ -157,3 +163,4 @@ body {
     min-width: 196px;
   }
 }
+ */
