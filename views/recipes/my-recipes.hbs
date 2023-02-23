@@ -13,12 +13,12 @@
 
 
 
-<hr >
+<hr class="horizontal-line-title">
 {{! --------------------------------------------------------------- }}
 
-<div class="recipe-cards">
+<div class="recipe-cards-fullarea-container">
   {{#each data}}
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <div class="card-body">
         <h5 id="recipe-name" class="{{recipe.label}}">{{recipe.label}}</h5>
         {{#each recipe.ingredients}}
@@ -26,10 +26,11 @@
         {{/each}}
 
         <div>
-          <p><span>Instructions:</span></p>
-          <p><span><a href="{{recipe.url}}">{{recipe.url}}</a></span></p>
+          <p><span id="instructions">Instructions (Link)</span></p>
+          <p><span><a href="{{recipe.url}}" class="url-recipe">{{recipe.url}}</a></span></p>
 
         </div>
+        <div class="day-button-area">
         <form method="POST" action="/profile/my-recipes">
           <select name="day" id="day">
             <option value="Monday" selected>Monday</option>
@@ -40,13 +41,15 @@
             <option value="Saturday">Saturday</option>
             <option value="Sunday">Sunday</option>
           </select>
-          <button type="submit" class="btn btn-primary">Add to mealplan</button>
+          
+          <button type="submit" id="button-add-to-mealplan"><span class="text">Add to mealplan</span></button>
           <input type="hidden" name="recipeName" value="{{recipe.label}}" />
           <input type="hidden" name="instructions" value="{{recipe.url}}" />
           {{#each recipe.ingredients}}
             <input type="hidden" name="ingredients" value="{{this.text}}" />
           {{/each}}
         </form>
+        </div>
       </div>
     </div>
   {{/each}}

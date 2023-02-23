@@ -19,9 +19,126 @@
     margin-top:10px;
 } */
 
-.page-title-container h1 {
-    display: flex;
-    justify-content: center;
-    padding-top: 4vh;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+.page-title-container h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  font-weight: bold;
+}
+
+/* .horizontal-line-title {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+} */
+
+.recipe-cards-fullarea-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  padding-bottom: 5vh;
+}
+
+.card-body {
+
+  height: 85vh;
+  width: 20vw;
+
+}
+
+.card {
+  margin-top: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 13px;;
+  line-height: 12px;
+}
+
+#recipe-name {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-weight: bold;
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+.url-recipe {
+    color: green;
+    font-weight: bold;
+
+}
+
+#instructions {
+  font-weight: bold;
+  font-size: 10px;
+}
+/* .day-button-area{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+
+
+
+#button-add-to-mealplan {
+  align-items: center;
+  background-image: linear-gradient(144deg, #3cab97, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#button-add-to-mealplan:active,
+#button-add-to-mealplan:hover {
+  outline: 0;
+}
+
+#button-add-to-mealplan span {
+  background-color: rgb(38, 169, 78);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: auto;
+  transition: 300ms;
+}
+
+#button-add-to-mealplan:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  #button-add-to-mealplan {
+    font-size: 16px;
+    min-width: 196px;
+  }
+}
