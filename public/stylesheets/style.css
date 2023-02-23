@@ -508,3 +508,8 @@ button:hover{
   justify-content: center;
   align-items: center;
 }
+
+.single-message-page {
+  display: flex;
+  flex-direction: column;
+}
